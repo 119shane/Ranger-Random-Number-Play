@@ -5,8 +5,6 @@ const doItBtn = document.getElementById("do_it_btn")
 const table = document.getElementById("table")
 const error = document.getElementById("error")
 
-const allNumberBtn = document.querySelectorAll(".numbers")
-
 
 doItBtn.addEventListener('click', (e)=> {
     e.preventDefault
@@ -31,6 +29,8 @@ function numberGenerator (a, b) {
             randomlyGeneratedNumArr.push(button)
             randomlyGeneratedNumArr.map(item => table.appendChild(item))
             error.textContent = ''
+            doItBtn.disabled = true
+            doItBtn.style.cursor = "none"
         }
     } 
     else {

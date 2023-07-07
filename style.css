@@ -22,8 +22,8 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 2rem;
-    margin: 2em;
+    font-size: 3rem;
+    margin: 1em;
 }
 
 p {
@@ -36,6 +36,7 @@ p {
 .input_container {
     display: flex;
     justify-content: space-between;
+    margin: 2em 0;
 }
 
 .input {
@@ -45,35 +46,50 @@ p {
 .input::after {
     content: 'This field is required';
     position: absolute;
-    top: 8em;
+    top: 6em;
     left: 0;
+    font-size: .9rem;
+    color: rgb(212, 52, 52);
+}
+
+label {
+    margin-right: 1em;
 }
 
 input {
-    padding: 1em;
+    padding: .4em;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     width: 150px;
 }
 
-
 button {
+    display: block;
+    width: 50%;
+    margin: 4em auto 1em;
     padding: .8em 2.5em;
     background-color: rgba(0,0,0,.5);
     color: white;
     font-size: 1.3rem;
     border: none;
     cursor: pointer;
-    margin: 2em 0;
+}
+
+#error {
+    text-transform: capitalize;
+    color: red;
+    margin: .1em auto 2em;
 }
 
 .table {
     display: grid;
-    grid-template-columns: repeat(6, 50px);
-    grid-template-rows: repeat(11, 50px);
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
     border: 2px solid red;
     color: black;
     background: whitesmoke;
+    padding: 1em;
+    height: 80vh;
 }
 
 .numbers {
