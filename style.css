@@ -82,9 +82,11 @@ button {
 }
 
 .table {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px); */
+    display: flex;
+    flex-wrap: wrap;
     border: 2px solid red;
     color: black;
     background: whitesmoke;

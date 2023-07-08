@@ -30,7 +30,7 @@ function numberGenerator (a, b) {
             randomlyGeneratedNumArr.map(item => table.appendChild(item))
             error.textContent = ''
             doItBtn.disabled = true
-            doItBtn.style.cursor = "none"
+            doItBtn.style.cursor = "notAllowed"
         }
     } 
     else {
