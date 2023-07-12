@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <form>
+    <label for="rangeStart">Range Start:</label>
+    <input type="text" id="rangeStart" name="rangeStart"><br>
 
-    <div class="wrapper">
-        <div class="random_number_generator">
-            <h1 class="title">Number Generator</h1>
-            <p class="sub_title">Randomly select 50 numbers within this range:</p>
-            <div class="input_container">
-                <div class="input">
-                    <label for="1st_number">From</label>
-                   <input required type="number" name="1st_number" id="1st_number" value="">
-                </div>
-                <div class="input">
-                    <label for="1st_number">To</label>
-                    <input required type="number" name="2nd_number" id="2nd_number" value="">
-                </div>
-            </div>
+    <label for="rangeEnd">Range End:</label>
+    <input type="text" id="rangeEnd" name="rangeEnd"><br>
 
-            <button id="do_it_btn">Do It!</button>
+    <button type="button" onclick="generateNumbers()">Generate Numbers</button>
+  </form>
 
-            <p id="error"></p>
+  <div id="numberContainer"></div>
 
-            <div id="table" class="table">
-            </div>
+  <div>
+    <h2>Selected Numbers:</h2>
+    <div id="selectedNumbers"></div>
+    <p id="addResult"></p>
+    <p id="multiplyResult"></p>
+  </div>
 
-        </div>
-    </div>
+  <div>
+    <h2>Generated URLs:</h2>
+    <ul id="generatedUrls"></ul>
+  </div>
 
-
-    <script src="script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
-
- 

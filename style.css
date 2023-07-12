@@ -3,9 +3,24 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Montserrat';
 }
 
-body {
+.number {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .selected {
+    background-color: yellow;
+  }
+
+
+
+/* body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -85,7 +100,10 @@ button {
     /* display: grid;
     grid-template-columns: repeat(8, 50px);
     grid-template-rows: repeat(8, 50px); */
-    display: flex;
+
+
+
+    /* display: flex;
     flex-wrap: wrap;
     border: 2px solid red;
     color: black;
@@ -102,4 +120,4 @@ button {
     background-color: ghostwhite;
     color: greenyellow;
     border: 1px solid black;
-}
+} */ 
