@@ -41,6 +41,9 @@
   
         localStorage.setItem('selectedNumbers', JSON.stringify(selectedNumbers));
         displaySelectedNumbers(selectedNumbers);
+  
+        generateUrl(selectedNumbers);
+        displayGeneratedUrls();
       }
   
       // Function to display selected numbers
@@ -65,6 +68,14 @@
   
         var multiplyResult = document.getElementById('multiplyResult');
         multiplyResult.textContent = 'Multiplication Result: ' + selectedNumbers.reduce((a, b) => a * b, 1);
+      }
+  
+      // Function to generate a URL for the selected numbers
+      function generateUrl(selectedNumbers) {
+        var url = 'https://example.com/result?numbers=' + selectedNumbers.join(',');
+        var generatedUrls = JSON.parse(localStorage.getItem('generatedUrls')) || [];
+        generatedUrls.push(url);
+        localStorage.setItem('generatedUrls', JSON.stringify(generatedUrls));
       }
   
       // Function to display generated URLs
